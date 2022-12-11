@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-US" #""zh-CN
+locale                   : "zh-CN" #"en-US"
 title                    : "Your Name / Site Title" #header左侧标题
 title_separator          : "-"
 name                     : &name "Your Name"
@@ -263,7 +263,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed #Rss功能
+  - jekyll-feed
   - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:

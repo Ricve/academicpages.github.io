@@ -6,13 +6,13 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-US" #""zh-CN
+locale                   : "zh-CN" #"en-US"
 title                    : "Your Name / Site Title" #header左侧标题
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description" #描述信息，可以在任意处读取
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io" 自动取当前访问域名,可以不写
-baseurl                  : "" # the subpath of your site, e.g. "/blog" 指定二级path
+url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
@@ -263,7 +263,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed #Rss功能
+  - jekyll-feed
   - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
