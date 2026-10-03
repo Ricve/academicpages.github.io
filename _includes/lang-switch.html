@@ -1,0 +1,41 @@
+{% assign current_lang = page.lang | default: "en" %}
+{% if current_lang == "zh" %}
+  {% assign other_lang = "en" %}
+  {% assign other_label = "EN" %}
+  {% assign fallback_url = "/en/" %}
+{% else %}
+  {% assign other_lang = "zh" %}
+  {% assign other_label = "中文" %}
+  {% assign fallback_url = "/" %}
+{% endif %}
+
+{% assign switch_url = nil %}
+{% if page.ref %}
+  {% assign switch_hit = site.pages | where: "ref", page.ref | where: "lang", other_lang | first %}
+  {% if switch_hit %}{% assign switch_url = switch_hit.url %}{% endif %}
+  {% unless switch_url %}
+    {% assign switch_hit = site.posts | where: "ref", page.ref | where: "lang", other_lang | first %}
+    {% if switch_hit %}{% assign switch_url = switch_hit.url %}{% endif %}
+  {% endunless %}
+  {% unless switch_url %}
+    {% assign switch_hit = site.publications | where: "ref", page.ref | where: "lang", other_lang | first %}
+    {% if switch_hit %}{% assign switch_url = switch_hit.url %}{% endif %}
+  {% endunless %}
+  {% unless switch_url %}
+    {% assign switch_hit = site.talks | where: "ref", page.ref | where: "lang", other_lang | first %}
+    {% if switch_hit %}{% assign switch_url = switch_hit.url %}{% endif %}
+  {% endunless %}
+  {% unless switch_url %}
+    {% assign switch_hit = site.teaching | where: "ref", page.ref | where: "lang", other_lang | first %}
+    {% if switch_hit %}{% assign switch_url = switch_hit.url %}{% endif %}
+  {% endunless %}
+  {% unless switch_url %}
+    {% assign switch_hit = site.portfolio | where: "ref", page.ref | where: "lang", other_lang | first %}
+    {% if switch_hit %}{% assign switch_url = switch_hit.url %}{% endif %}
+  {% endunless %}
+{% endif %}
+{% unless switch_url %}
+  {% assign switch_url = fallback_url %}
+{% endunless %}
+
+<a href="{{ base_path }}{{ switch_url }}">{{ other_label }}</a>

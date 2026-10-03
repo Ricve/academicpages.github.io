@@ -1,22 +1,37 @@
 # main links links
+# url / title: English. url_zh / title_zh: Chinese. The masthead picks a set from page.lang.
 main:
   - title: "Publications"
+    title_zh: "论文"
     url: /publications/
+    url_zh: /zh/publications/
 
   - title: "Talks"
-    url: /talks/    
+    title_zh: "报告"
+    url: /talks/
+    url_zh: /zh/talks/
 
   - title: "Teaching"
-    url: /teaching/    
-    
+    title_zh: "教学"
+    url: /teaching/
+    url_zh: /zh/teaching/
+
   - title: "Portfolio"
+    title_zh: "作品"
     url: /portfolio/
-        
+    url_zh: /zh/portfolio/
+
   - title: "Blog Posts"
+    title_zh: "博客"
     url: /year-archive/
-    
+    url_zh: /zh/year-archive/
+
   - title: "CV"
+    title_zh: "简历"
     url: /cv/
-    
+    url_zh: /zh/cv/
+
   - title: "Guide"
+    title_zh: "指南"
     url: /markdown/
+    url_zh: /zh/markdown/

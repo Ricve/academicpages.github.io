@@ -1,0 +1,24 @@
+{% assign page_lang = page.lang | default: "en" %}
+{% assign items = site[include.collection] %}
+{% if include.reversed %}
+  {% assign items = items | reverse %}
+{% endif %}
+{% assign shown = 0 %}
+{% for post in items %}
+  {% assign item_lang = post.lang | default: "en" %}
+  {% if item_lang == page_lang %}
+    {% assign shown = shown | plus: 1 %}
+    {% if include.partial == "talk" %}
+      {% include archive-single-talk.html %}
+    {% elsif include.partial == "cv" %}
+      {% include archive-single-cv.html %}
+    {% elsif include.partial == "talk-cv" %}
+      {% include archive-single-talk-cv.html %}
+    {% else %}
+      {% include archive-single.html %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% if shown == 0 and page_lang == "zh" and include.partial != "cv" and include.partial != "talk-cv" %}
+<p>这一栏还没有中文内容。新增条目时写上 <code>lang: zh</code>，并与对应英文稿使用相同的 <code>ref</code>。</p>
+{% endif %}

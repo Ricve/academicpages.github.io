@@ -2,6 +2,8 @@
 permalink: /markdown/
 title: "Markdown"
 author_profile: true
+lang: en
+ref: guide
 redirect_from: 
   - /md/
   - /markdown.html

@@ -3,6 +3,8 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+lang: en
+ref: publications
 ---
 
 {% if author.googlescholar %}
@@ -11,6 +13,4 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+{% include collection-archive.html collection="publications" reversed="true" %}

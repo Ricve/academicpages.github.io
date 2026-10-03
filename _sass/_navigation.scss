@@ -223,6 +223,24 @@
       }
     }
 
+    .masthead__menu-item--lang a {
+      margin-left: 0;
+      padding: 0.15rem 0.7rem;
+      border: 1px solid $primary-color;
+      border-radius: 999px;
+      color: $primary-color;
+      font-weight: 700;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover {
+        color: #fff;
+        background: $primary-color;
+      }
+    }
+
     a {
       position: relative;
 
